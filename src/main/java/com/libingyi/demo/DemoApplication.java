@@ -19,7 +19,7 @@ public class DemoApplication {
             for (int i = 0; i < 100; i++) {
                 new Thread(() -> {
                     try {
-                        //  申请512kb
+                        //  申请1M
                         byte[] temp = new byte[1024 * 1024];
                         Thread.sleep(new Random().nextInt(1000)); // 随机睡眠1秒以内
                     } catch (InterruptedException e) {
