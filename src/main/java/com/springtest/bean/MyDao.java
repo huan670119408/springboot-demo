@@ -1,4 +1,4 @@
-package com.spring.bean;
+package com.springtest.bean;
 
 import org.springframework.stereotype.Repository;
 

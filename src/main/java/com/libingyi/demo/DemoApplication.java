@@ -6,7 +6,6 @@ import java.util.Random;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-@SpringBootApplication
 public class DemoApplication {
 
     public static void main(String[] args) {
