@@ -13,18 +13,18 @@ public class RedisTest {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(RedisConfig.class);
         StringRedisTemplate redisTemplate = (StringRedisTemplate) context.getBean("stringRedisTemplate");
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 1000; i++) {
             redisTemplate.opsForValue().set(String.valueOf(i), String.valueOf(i));
             try {
-                Thread.sleep(1000);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 1000; i++) {
             redisTemplate.opsForValue().get(String.valueOf(i));
             try {
-                Thread.sleep(1000);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
