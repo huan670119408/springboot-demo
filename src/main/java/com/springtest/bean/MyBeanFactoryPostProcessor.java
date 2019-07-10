@@ -11,6 +11,6 @@ public class MyBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory configurableListableBeanFactory) throws BeansException {
         BeanDefinition bd = configurableListableBeanFactory.getBeanDefinition("myService");
-        bd.setBeanClassName("com.spring.bean.MyDao");
+//        bd.setBeanClassName("com.spring.bean.MyDao");
     }
 }
