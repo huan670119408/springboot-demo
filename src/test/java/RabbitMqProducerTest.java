@@ -18,10 +18,10 @@ public class RabbitMqProducerTest {
 
     @Test
     public void hello() {
-         for(int i=0;i<10;i++){
+         for(int i=0;i<20;i++){
              producer.send();
              try {
-                 Thread.sleep(1000);
+                 Thread.sleep(500);
              } catch (InterruptedException e) {
                  e.printStackTrace();
              }

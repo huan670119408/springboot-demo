@@ -19,5 +19,4 @@ public class FanoutRabbitMQConsumer {
         System.out.println("Consumer\t"+msg);
     }
 
-
 }
