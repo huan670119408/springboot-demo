@@ -18,7 +18,8 @@ public class RabbitMqProducerTest {
 
     @Test
     public void hello() {
-         for(int i=0;i<20;i++){
+        producer.init();
+         for(int i=0;i<10;i++){
              producer.send();
              try {
                  Thread.sleep(500);

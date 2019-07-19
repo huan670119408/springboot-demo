@@ -15,11 +15,11 @@ public class FanoutRabbitConfiguration {
 
     /**
      * 任何发送到Fanout Exchange的消息都会被转发到与该Exchange绑定(Binding)的所有Queue上,不需要路由关键字匹配
-     *
+     * <p>
      * 1.这种模式需要提前将Exchange与Queue进行绑定，一个Exchange可以绑定多个Queue，一个Queue可以同多个Exchange进行绑定
-     *
+     * <p>
      * 2.这种模式不需要RouteKey
-     *
+     * <p>
      * 3.如果接受到消息的Exchange没有与任何Queue绑定，则消息会被抛弃。
      */
 
