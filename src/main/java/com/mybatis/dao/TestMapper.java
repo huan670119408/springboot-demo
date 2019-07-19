@@ -1,4 +1,4 @@
-package com.springtest.dao;
+package com.mybatis.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 

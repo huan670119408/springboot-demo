@@ -1,7 +1,7 @@
 package com.springtest;
 
-import com.springtest.config.Config;
-import com.springtest.dao.TestMapper;
+import com.mybatis.Config;
+import com.mybatis.dao.TestMapper;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**

@@ -4,7 +4,7 @@ import com.springtest.bean.MyDao;
 import com.springtest.bean.MyImport;
 import com.springtest.bean.MyImportSelectorAAA;
 import com.springtest.bean.MyImportSelectorBBB;
-import com.springtest.config.Config;
+import com.mybatis.Config;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class SpringTest {

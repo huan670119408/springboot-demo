@@ -1,4 +1,4 @@
-package com.springtest.config;
+package com.mybatis;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.springtest.bean.MyImport;
@@ -15,14 +15,14 @@ import javax.sql.DataSource;
 @Configuration
 @ComponentScan("com.springtest")
 @Import({MyImport.class, MyImportSelector.class})
-@MapperScan(value="com.springtest.dao")
+@MapperScan(value="com.mybatis.dao")
 public class Config {
 
     @Bean
     public DataSource dataSource(){
         DataSource dataSource = new DruidDataSource();
         ((DruidDataSource) dataSource).setDriverClassName("com.mysql.jdbc.Driver");
-        ((DruidDataSource) dataSource).setUrl("jdbc:mysql://192.168.80.130/poem_analysis");
+        ((DruidDataSource) dataSource).setUrl("jdbc:mysql://192.168.80.131/poem_analysis");
         ((DruidDataSource) dataSource).setUsername("root");
         ((DruidDataSource) dataSource).setPassword("123456");
         ((DruidDataSource) dataSource).setInitialSize(10);
