@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.dao.AipMapper">
+
+    <insert id="insertAip"  parameterType="com.mybatis.bean.Aip">
+        INSERT INTO AIP(`ID`,`ABSOLUTE_PATH`,`FILE_NAME`,`RESULT`) VALUES(#{id}, #{absolutePath}, #{fileName}, #{result});
+    </insert>
+
+</mapper>

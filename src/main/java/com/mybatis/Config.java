@@ -22,8 +22,9 @@ public class Config {
     @Bean
     public DataSource dataSource(){
         DataSource dataSource = new DruidDataSource();
+        // jdbc:mysql://192.168.80.131:3306/poem_analysis?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true
         ((DruidDataSource) dataSource).setDriverClassName("com.mysql.jdbc.Driver");
-        ((DruidDataSource) dataSource).setUrl("jdbc:mysql://192.168.80.131/poem_analysis");
+        ((DruidDataSource) dataSource).setUrl("jdbc:mysql://192.168.80.131/poem_analysis?useUnicode=true&characterEncoding=utf8");
         ((DruidDataSource) dataSource).setUsername("root");
         ((DruidDataSource) dataSource).setPassword("123456");
         ((DruidDataSource) dataSource).setInitialSize(10);
