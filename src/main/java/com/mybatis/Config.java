@@ -9,13 +9,14 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 import javax.sql.DataSource;
 
 @Configuration
 @ComponentScan("com.springtest")
 @Import({MyImport.class, MyImportSelector.class})
-@MapperScan(value="com.mybatis.dao")
+@MapperScan("com.mybatis.dao")
 public class Config {
 
     @Bean
@@ -40,7 +41,7 @@ public class Config {
     public SqlSessionFactoryBean sqlSessionFactory(DataSource dataSource) throws Exception {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         factoryBean.setDataSource(dataSource);
-//        factoryBean.setMapperLocations( new PathMatchingResourcePatternResolver().getResources("classpath*:mapper/*.xml"));
+        factoryBean.setMapperLocations( new PathMatchingResourcePatternResolver().getResources("classpath*:mapper/*.xml"));
         return factoryBean;
     }
 

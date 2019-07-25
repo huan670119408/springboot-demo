@@ -52,7 +52,3 @@ spring:
     listener:
       simple:
         acknowledge-mode: manual
-
-
-mybatis:
-  mapper-locations: classpath*:mapper/*mapper.xml

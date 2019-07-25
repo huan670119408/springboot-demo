@@ -1,6 +1,6 @@
 package com.mybatis;
 
-import com.mybatis.dao.TestMapper;
+import com.mybatis.dao.PoemMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
@@ -9,11 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class MybatisService {
 
     @Autowired
-    private TestMapper testMapper;
+    private PoemMapper testMapper;
 
-    public void test(){
-        String poemName = testMapper.getPoemName();
+    public void test() {
+        String poemName = testMapper.getPoemName("1");
         System.out.println(poemName);
-}
+    }
 
 }
